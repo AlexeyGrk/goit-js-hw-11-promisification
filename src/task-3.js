@@ -5,21 +5,17 @@ const randomIntegerFromInterval = (min, max) => {
 const makeTransaction = transaction => {
   const delay = randomIntegerFromInterval(200, 500);
 
-  setTimeout(() => {
-    const canProcess = Math.random() > 0.3;
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      const canProcess = Math.random() > 0.3;
 
-    return new Promise((resolve, reject) => {
       if (canProcess) {
-        resolve();
+        resolve(transaction.id, delay);
+      } else {
+        reject(transaction.id);
       }
-      reject();
-    });
-
-    if (canProcess) {
-      onSuccess(transaction.id, delay);
-    } else {
-    }
-  }, delay);
+    }, delay);
+  });
 };
 
 const logSuccess = (id, time) => {
@@ -33,10 +29,10 @@ const logError = id => {
 /*
  * Работает так
  */
-makeTransaction({ id: 70, amount: 150 }, logSuccess, logError);
-makeTransaction({ id: 71, amount: 230 }, logSuccess, logError);
-makeTransaction({ id: 72, amount: 75 }, logSuccess, logError);
-makeTransaction({ id: 73, amount: 100 }, logSuccess, logError);
+// makeTransaction({ id: 70, amount: 150 }, logSuccess, logError);
+// makeTransaction({ id: 71, amount: 230 }, logSuccess, logError);
+// makeTransaction({ id: 72, amount: 75 }, logSuccess, logError);
+// makeTransaction({ id: 73, amount: 100 }, logSuccess, logError);
 /*
  * Должно работать так
  */
