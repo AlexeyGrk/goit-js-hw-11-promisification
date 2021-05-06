@@ -1,8 +1,8 @@
 parcelRequire=function(e,r,t,n){var i,o="function"==typeof parcelRequire&&parcelRequire,u="function"==typeof require&&require;function f(t,n){if(!r[t]){if(!e[t]){var i="function"==typeof parcelRequire&&parcelRequire;if(!n&&i)return i(t,!0);if(o)return o(t,!0);if(u&&"string"==typeof t)return u(t);var c=new Error("Cannot find module '"+t+"'");throw c.code="MODULE_NOT_FOUND",c}p.resolve=function(r){return e[t][1][r]||r},p.cache={};var l=r[t]=new f.Module(t);e[t][0].call(l.exports,p,l,l.exports,this)}return r[t].exports;function p(e){return f(p.resolve(e))}}f.isParcelRequire=!0,f.Module=function(e){this.id=e,this.bundle=f,this.exports={}},f.modules=e,f.cache=r,f.parent=o,f.register=function(r,t){e[r]=[function(e,r){r.exports=t},{}]};for(var c=0;c<t.length;c++)try{f(t[c])}catch(e){i||(i=e)}if(t.length){var l=f(t[t.length-1]);"object"==typeof exports&&"undefined"!=typeof module?module.exports=l:"function"==typeof define&&define.amd?define(function(){return l}):n&&(this[n]=l)}if(parcelRequire=f,i)throw i;return f}({"clu1":[function(require,module,exports) {
 
-},{"./../images/demo.jpg":[["demo.090c7c6d.jpg","nKR3"],"nKR3"]}],"m1hc":[function(require,module,exports) {
-var n=function(n,t){return Math.floor(Math.random()*(t-n+1)+n)},t=n(200,500),o=function(n){var o=t;return new Promise(function(t,a){setTimeout(function(){Math.random()>.3?t(n.id,o):a(n.id)},o)})},a=function(n,o){o=t,console.log("Transaction ".concat(n," processed in ").concat(o,"ms"))},c=function(n){console.warn("Error processing transaction ".concat(n,". Please try again later."))};o({id:70,amount:150}).then(a).catch(c),o({id:71,amount:230}).then(a).catch(c),o({id:72,amount:75}).then(a).catch(c),o({id:73,amount:100}).then(a).catch(c);
+},{"./../images/demo.jpg":[["demo.090c7c6d.jpg","nKR3"],"nKR3"]}],"os7R":[function(require,module,exports) {
+var n=function(n){return new Promise(function(e,t){setTimeout(function(){e("".concat(n))},n)})},e=function(n){return console.log("Resolved after ".concat(n,"ms"))};n(2e3).then(e),n(1e3).then(e),n(1500).then(e);
 },{}],"Focm":[function(require,module,exports) {
-"use strict";require("./sass/main.scss"),require("./task-3.js");
-},{"./sass/main.scss":"clu1","./task-3.js":"m1hc"}]},{},["Focm"], null)
-//# sourceMappingURL=/parcel-project-template/src.3c650971.js.map
+"use strict";require("./sass/main.scss"),require("./task-1.js");
+},{"./sass/main.scss":"clu1","./task-1.js":"os7R"}]},{},["Focm"], null)
+//# sourceMappingURL=/goit-js-hw-11-promisification/src.ec7b8847.js.map
